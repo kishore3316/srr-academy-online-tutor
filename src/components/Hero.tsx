@@ -1,7 +1,7 @@
 import React from 'react';
 import { Sparkles, MessageSquare, Award, ShieldCheck, ChevronRight, Check } from 'lucide-react';
 import { ACADEMY_INFO } from '../data/content';
-import { InteractiveBoardVisual } from './InteractiveBoardVisual';
+import { RealtimeChessBoard } from './RealtimeChessBoard';
 
 interface HeroProps {
   onOpenModal: (topic?: string) => void;
@@ -85,9 +85,9 @@ export const Hero: React.FC<HeroProps> = ({ onOpenModal }) => {
 
           </div>
 
-          {/* Right Column: Interactive Chessboard Visual */}
+          {/* Right Column: Real-Time Chess Engine Animation */}
           <div className="lg:col-span-5 relative">
-            <InteractiveBoardVisual />
+            <RealtimeChessBoard />
           </div>
 
         </div>
