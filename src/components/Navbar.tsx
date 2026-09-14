@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Crown, MessageSquare, Award, Sparkles } from 'lucide-react';
+import { Menu, X, Crown, Award, Sparkles } from 'lucide-react';
 import { ACADEMY_INFO } from '../data/content';
 
 interface NavbarProps {
@@ -24,6 +24,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenModal }) => {
     { name: 'Coach Kishore A', href: '#about-coach' },
     { name: 'Curriculum', href: '#curriculum' },
     { name: 'Why Us', href: '#why-us' },
+    { name: 'Lichess Analyzer', href: '#lichess-analyzer' },
     { name: 'Demo Sessions', href: '#demo-section' },
     { name: 'Monthly Plan', href: '#monthly-plan' },
     { name: 'FAQ', href: '#faq' },
@@ -57,7 +58,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenModal }) => {
           </a>
 
           {/* Desktop Nav Links */}
-          <nav className="hidden lg:flex items-center gap-6 text-sm font-medium text-slate-300">
+          <nav className="hidden lg:flex items-center gap-5 text-sm font-medium text-slate-300">
             {navLinks.map((link) => (
               <a
                 key={link.name}
@@ -128,15 +129,6 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenModal }) => {
               <Sparkles className="w-4 h-4" />
               Book a Demo Session
             </button>
-            <a
-              href={ACADEMY_INFO.whatsappUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-full py-3 rounded-xl font-bold text-xs uppercase tracking-wider bg-slate-800 text-emerald-400 border border-emerald-500/30 flex items-center justify-center gap-2"
-            >
-              <MessageSquare className="w-4 h-4" />
-              Contact on WhatsApp ({ACADEMY_INFO.whatsappNumber})
-            </a>
           </div>
         </div>
       )}

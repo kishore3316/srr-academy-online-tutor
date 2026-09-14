@@ -5,6 +5,7 @@ import { AboutAcademy } from './components/AboutAcademy';
 import { AboutCoach } from './components/AboutCoach';
 import { Curriculum } from './components/Curriculum';
 import { WhyChooseUs } from './components/WhyChooseUs';
+import { LichessStockfishAnalyzer } from './components/LichessStockfishAnalyzer';
 import { DemoSection } from './components/DemoSection';
 import { MonthlyPlan } from './components/MonthlyPlan';
 import { HowItWorks } from './components/HowItWorks';
@@ -50,6 +51,9 @@ export function App() {
 
         {/* 5. Why Choose SRR Academy? */}
         <WhyChooseUs onOpenModal={handleOpenModal} />
+
+        {/* Dedicated Section: Interactive Lichess & Stockfish Board Analyzer */}
+        <LichessStockfishAnalyzer />
 
         {/* 6. Demo Session Section */}
         <DemoSection onOpenModal={handleOpenModal} />
