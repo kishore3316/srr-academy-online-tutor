@@ -15,6 +15,7 @@ import { FinalCTA } from './components/FinalCTA';
 import { Footer } from './components/Footer';
 import { WhatsAppFloat } from './components/WhatsAppFloat';
 import { DemoModal } from './components/DemoModal';
+import { ChessOpeningLoader } from './components/ChessOpeningLoader';
 
 export function App() {
   const [modalOpen, setModalOpen] = useState(false);
@@ -32,6 +33,9 @@ export function App() {
   return (
     <div className="min-h-screen bg-[#070a12] text-slate-100 flex flex-col font-['Plus_Jakarta_Sans',sans-serif] selection:bg-[#d4af37]/30 selection:text-amber-200">
       
+      {/* Chessboard Opening Animation Overlay */}
+      <ChessOpeningLoader />
+
       {/* Sticky Header Navigation */}
       <Navbar onOpenModal={handleOpenModal} />
 
